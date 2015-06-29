@@ -25,38 +25,38 @@ This FAQ addresses commonly asked questions about the service. For further infor
 * 20 cores (2.3GHz 2x10 E5), 128 GB RAM, dual 10Gb NIC
   Storage is 6x2TB 7200 RAID 5 (9.5TB usable)
 
-** Can I increase or decrease CPU, memory or storage resources on Bare Metal servers?**
+**Can I increase or decrease CPU, memory or storage resources on Bare Metal servers?**
 
-** What are the self-service actions available to me through the Control portal for Bare Metal servers?**
+**What are the self-service actions available to me through the Control portal for Bare Metal servers?**
 
-** What are the best workloads for this new server class?**
+**What are the best workloads for this new server class?**
 
-** How do I connect my Bare Metal servers over the network to my CenturyLink Cloud virtual servers?**
+**How do I connect my Bare Metal servers over the network to my CenturyLink Cloud virtual servers?**
 
-** Since these servers use local storage, how do I avoid application failure if underlying hardware fails?**
+**Since these servers use local storage, how do I avoid application failure if underlying hardware fails?**
 
-** How is hardware support and replacement handled for Bare Metal servers?**
+**How is hardware support and replacement handled for Bare Metal servers?**
 
-** What are the security features available for Bare Metal servers?**
+**What are the security features available for Bare Metal servers?**
 
-** What should I do if I do not see the configuration of CPU/Memory/Storage I want?**
+**What should I do if I do not see the configuration of CPU/Memory/Storage I want?**
 
-** What features do Bare Metal servers share with CenturyLink Cloud virtual servers?**
+**What features do Bare Metal servers share with CenturyLink Cloud virtual servers?**
 
-** Is there a term commit option available for Bare Metal servers?**
+**Is there a term commit option available for Bare Metal servers?**
 
-** May I have console or iLO access to my Bare Metal server?**
+**May I have console or iLO access to my Bare Metal server?**
 
-** Where are Bare Metal servers available geographically?**
+**Where are Bare Metal servers available geographically?**
 
-** What should I do if my Bare Metal server becomes unresponsive?**
+**What should I do if my Bare Metal server becomes unresponsive?**
 
-** How is data destruction handled in the cases of hard drive failure/replacement and/or server relinquishment for Bare Metal servers?**
+**How is data destruction handled in the cases of hard drive failure/replacement and/or server relinquishment for Bare Metal servers?**
 
-** Do I still get billed for a Bare Metal server that is turned off?**
+**Do I still get billed for a Bare Metal server that is turned off?**
 
-** Can I customize my storage configuration on a Bare Metal server?**
+**Can I customize my storage configuration on a Bare Metal server?**
 
-** Can I bring my own OS image?**
+**Can I bring my own OS image?**
 
-** Can I use my own licensing for the OS?**
+**Can I use my own licensing for the OS?**

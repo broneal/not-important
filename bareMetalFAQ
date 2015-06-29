@@ -10,41 +10,53 @@
 
 ### Description
 
-CenturyLink Cloud supports both vertical and horizontal autoscale policies that allow for the automatic scaling of resources based on user-defined thresholds. Based on these thresholds, vertical autoscale policies will add and remove CPU allocation to and from a given server, whereas horizontal autoscale policies power on and off instances within a (load balanced) group of servers.
+CenturyLink Bare Metal servers introduce the ability to provision and manage physical machines from the CenturyLink Cloud platform in a self-service, on-demand, and highly automated fashion.
 
-This FAQ addresses commonly asked questions about the service. For a walkthrough of this service, see the [Creating and Applying Autoscale Policies](creating-and-applying-autoscale-policies.md).
+This FAQ addresses commonly asked questions about the service. For further information on this service and how it compares to virtual servers, see [ComparisonKB](comparison??.md).
 
 ### General
 
 **What are the available configurations for Bare Metal servers?**
 
 * 4 cores (3.6GHz E3), 16 GB RAM, 10Gb NIC
-** Storage is 2x1TB 7200 RAID 1 (1TB usable)
+  Storage is 2x1TB 7200 RAID 1 (1TB usable)
 * 12 cores (2.4GHz 2x6 E5), 64 GB RAM, dual 10Gb NIC
-** Storage is 4x2TB 7200 RAID 5 (5.7TB usable)
+  Storage is 4x2TB 7200 RAID 5 (5.7TB usable)
 * 20 cores (2.3GHz 2x10 E5), 128 GB RAM, dual 10Gb NIC
-** Storage is 6x2TB 7200 RAID 5 (9.5TB usable)
+  Storage is 6x2TB 7200 RAID 5 (9.5TB usable)
 
+**Can I increase or decrease CPU, memory or storage resources on Bare Metal servers?**
 
-**What's the difference between horizontal and vertical Autoscale policies?**
+**What are the self-service actions available to me through the Control portal for Bare Metal servers?**
 
-Vertical autoscaling (scaling up/down) adds (or removes) CPUs to (or from) an existing server based on the policy thresholds set. This policy gets applied on a server by server basis. See details below on when servers are scaled up or down for moreinformation on what triggers a vertical autoscale event. Horizontal autoscaling (scaling out/in) powers on (or off) servers within a group and adds (or removes) them from the load balancer configuration based on the thresholds set in the policy. This policy is applied at the group level and will affect every server within the group. See details below on when servers are scaled out or in for more information on what triggers a horizontal autoscale event.
+**What are the best workloads for this new server class?**
 
+**How do I connect my Bare Metal servers over the network to my CenturyLink Cloud virtual servers?**
 
+**Since these servers use local storage, how do I avoid application failure if underlying hardware fails?**
 
-----------
+**How is hardware support and replacement handled for Bare Metal servers?**
 
-### Vertical Autoscale
+**What are the security features available for Bare Metal servers?**
 
-**When does a server scale up?**
+**What should I do if I do not see the configuration of CPU/Memory/Storage I want?**
 
-A server scales up when its utilization meets or exceeds the user-defined threshold for a user-defined period of time. Let's consider an example. If you create a policy with a 85% utilization threshold and a threshold period of 10 minutes, this means that if the server has at least 85% utilization for a 10 minute period, then an autoscale event will occur and capacity will be immediately added. Currently, vertical Autoscale policy thresholds can only be defined for CPU utilization.
+**What features do Bare Metal servers share with CenturyLink Cloud virtual servers?**
 
+**Is there a term commit option available for Bare Metal servers?**
 
-----------
+**May I have console or iLO access to my Bare Metal server?**
 
-### Horizontal Autoscale
+**Where are Bare Metal servers available geographically?**
 
-**When does a server group scale out?**
+**What should I do if my Bare Metal server becomes unresponsive?**
 
-A server group will scale out when the overall average utilization of the servers within the group meets or exceeds the user-defined threshold for a user-defined period of time. Let's consider an example. If you create a policy with a 85% utilization threshold and a threshold period of 10 minutes, this means that if the server group has at least 85% utilization for a 10 minute period, then an autoscale event will occur and the number of incremental additional servers that was specified will be powered on and added to the load balancer configuration. Horizontal Autoscale policy thresholds can be defined based on a combination of CPU and/or memory utilization.
+**How is data destruction handled in the cases of hard drive failure/replacement and/or server relinquishment for Bare Metal servers?**
+
+**Do I still get billed for a Bare Metal server that is turned off?**
+
+**Can I customize my storage configuration on a Bare Metal server?**
+
+**Can I bring my own OS image?**
+
+**Can I use my own licensing for the OS?**

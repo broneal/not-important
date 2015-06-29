@@ -1,0 +1,50 @@
+{{{
+  "title": "Bare Metal FAQ",
+  "date": "06-29-2015",
+  "author": "Bryan O'Neal",
+  "attachments": [],
+  "related-products": [CenturyLink Cloud, Foundation Hosting],
+  "contentIsHTML": false,
+  "sticky": false
+}}}
+
+### Description
+
+CenturyLink Cloud supports both vertical and horizontal autoscale policies that allow for the automatic scaling of resources based on user-defined thresholds. Based on these thresholds, vertical autoscale policies will add and remove CPU allocation to and from a given server, whereas horizontal autoscale policies power on and off instances within a (load balanced) group of servers.
+
+This FAQ addresses commonly asked questions about the service. For a walkthrough of this service, see the [Creating and Applying Autoscale Policies](creating-and-applying-autoscale-policies.md).
+
+### General
+
+**What are the available configurations for Bare Metal servers?**
+
+* 4 cores (3.6GHz E3), 16 GB RAM, 10Gb NIC
+** Storage is 2x1TB 7200 RAID 1 (1TB usable)
+* 12 cores (2.4GHz 2x6 E5), 64 GB RAM, dual 10Gb NIC
+** Storage is 4x2TB 7200 RAID 5 (5.7TB usable)
+* 20 cores (2.3GHz 2x10 E5), 128 GB RAM, dual 10Gb NIC
+** Storage is 6x2TB 7200 RAID 5 (9.5TB usable)
+
+
+**What's the difference between horizontal and vertical Autoscale policies?**
+
+Vertical autoscaling (scaling up/down) adds (or removes) CPUs to (or from) an existing server based on the policy thresholds set. This policy gets applied on a server by server basis. See details below on when servers are scaled up or down for moreinformation on what triggers a vertical autoscale event. Horizontal autoscaling (scaling out/in) powers on (or off) servers within a group and adds (or removes) them from the load balancer configuration based on the thresholds set in the policy. This policy is applied at the group level and will affect every server within the group. See details below on when servers are scaled out or in for more information on what triggers a horizontal autoscale event.
+
+
+
+----------
+
+### Vertical Autoscale
+
+**When does a server scale up?**
+
+A server scales up when its utilization meets or exceeds the user-defined threshold for a user-defined period of time. Let's consider an example. If you create a policy with a 85% utilization threshold and a threshold period of 10 minutes, this means that if the server has at least 85% utilization for a 10 minute period, then an autoscale event will occur and capacity will be immediately added. Currently, vertical Autoscale policy thresholds can only be defined for CPU utilization.
+
+
+----------
+
+### Horizontal Autoscale
+
+**When does a server group scale out?**
+
+A server group will scale out when the overall average utilization of the servers within the group meets or exceeds the user-defined threshold for a user-defined period of time. Let's consider an example. If you create a policy with a 85% utilization threshold and a threshold period of 10 minutes, this means that if the server group has at least 85% utilization for a 10 minute period, then an autoscale event will occur and the number of incremental additional servers that was specified will be powered on and added to the load balancer configuration. Horizontal Autoscale policy thresholds can be defined based on a combination of CPU and/or memory utilization.
